@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+:root {
+  --primary-color: #e67e22; /* Un arancione terra/caldo per il tasto dona */
+  --text-color: #0d151e;    /* Grigio scuro/antracite per i testi (meno aggressivo del nero) */
+  --bg-color: #ffffff;
+}
+
+
+/* NAVBAR */
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); /* Un'ombra leggera e moderna */
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(2000px);
+  z-index: 1000;
+}
+
+
+/*.navbar .logo{
+    height: 120px;
+    width: 150px;
+    background: url("https://gruppomissionarioarcobaleno.weebly.com/uploads/4/2/8/1/42814387/1469308157.png");
+    background-size: center;
+    background-size: cover;
+}*/
+
+
+/* Link di Navigazione */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffffb0;
+  border-radius: 40px;
+  height: 70px;
+  gap: 5px;
+}
+
+.nav-links li{
+  margin: 0 10px;
+  padding: 15px 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 40px;
+}
+
+.nav-links a {
+  font-family: 'Inter', sans-serif; /* Font più standard e leggibile per i link */
+  font-weight: 700;
+  padding: 0 20px;
+ text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  opacity: 0.8;
+  width: fit-content;
+  transition: all 0.3s ease;  
+}
+
+.nav-links li:hover{
+  background-color: rgba(230, 126, 34, 0.3);
+}
+
+/* Stile del Logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 140px;
+  width: 140px; /* imposta larghezza visibile */
+  background-image: url("./images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: contain;
+  gap: 10px;
+  border-radius: 60px 30px 60px 30px;
+  backdrop-filter: blur(10px);    
+}
+
+.btn-dona {
+  font-weight: 900;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px; /* Bordi completamente arrotondati in linea con il font */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-dona:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+
+/* HERO SECTION*/
+.hero-section{
+    height: 100vh;
+    width: 100%;
+    background-color: #2c3e50;
+}
+
+
+.boxes{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+    z-index: 0;
+}
+
+.box{
+    height: 100vh;
+    width: calc(100% / 7);
+    transition: .7s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.box1{background-color: #ff0000;
+  background-image: url("./images/img1.jpeg"); 
+  background-position: center;
+  background-size: cover;   
+}
+.box2{background-color: #ffa500;
+background-image: url("./images/img2.jpeg"); 
+  background-position: center;
+  background-size: cover;  }
+.box3{background-color:#ffff00;
+background-image: url("./images/img3.jpeg"); 
+  background-position: center;
+  background-size: cover;  }
+.box4{background-color:#008000;
+background-image: url("./images/img4.jpeg"); 
+  background-position: center;
+  background-size: cover;  }
+.box5{background-color:#0000ff;}
+.box6{background-color:#4b0082;}
+.box7{background-color:#ee82ee;}
+
+.box h1{
+    opacity: 0;
+    color: white;
+    transition:  ease-in .5s;
+    padding: 2rem;
+    border-radius: 20px   ;
+    backdrop-filter: blur(10px);
+}
+
+.box-obscuer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition:  ease-in .5s;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.box h1{
+    position: relative;
+    z-index: 2;
+}
+
+.box:hover{
+    width: 100%;
+}
+
+.box:hover .box-obscuer{
+  opacity: 0;
+}
+
+.box:hover h1{
+  opacity: 1;
+}
+
+@media screen and (max-width: 420px) {
+  
+  .navbar{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links {
+     /* In futuro qui potrai aggiungere un menu a comparsa (hamburger) */
+  }
+
+    .boxes{
+        flex-direction: column;
+    }
+    .box{
+        width: 100%;
+        height: calc(100vh / 7);;
+    }
+
+    .box:hover{
+        width: 100%;
+        height: 100%;
+    }
+}
