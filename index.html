@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -43,34 +44,32 @@
         </section>
 
         <section id="chi-siamo" class="section chi-siamo-section">
-            <div class="container chi-siamo-container">
+    <div class="container chi-siamo-container">
 
-                <div class="img-box">
-                    <img src="./images/Varie e Kpetene 118.jpg" alt="Gruppo missionario Arcobaleno">
-                </div>
-
-                <div class="text-box">
-                    <h1 class="section-title">Chi siamo</h1>
-
-                    <p>
-                        Siamo un gruppo missionario impegnato in attività di servizio,
-                        solidarietà e crescita comunitaria.
-                    </p>
-
-                    <p>
-                        Il nostro obiettivo è portare aiuto concreto e costruire relazioni.
-                    </p>
-
-                    <div class="values">
-                        <div class="card">❤️ Servizio</div>
-                        <div class="card">🤝 Comunità</div>
-                        <div class="card">🌍 Missione</div>
-                    </div>
-
-                </div>
-
+        <div class="img-box carousel">
+            <div class="carousel-track" id="carouselTrack">
+                <img src="./images/Varie e Kpetene 118.jpg" alt="Foto 1" class="carousel-slide">
+                <img src="./images/20230126_123616.jpg" alt="Foto 2" class="carousel-slide"> 
+                <img src="./images/^643BE0F93E225087F32B820FA3A47ED05E23D823FACB46752B^pimgpsh_fullsize_distr.jpg" alt="Foto 3" class="carousel-slide">
+                <img src="./images/29 IMG_1452.JPG" alt="Foto 4" class="carousel-slide">
             </div>
-        </section>
+            
+            <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+            <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+        </div>
+        <div class="text-box">
+            <h1 class="section-title">Chi siamo</h1>
+            <p>Siamo un gruppo missionario impegnato in attività di servizio, solidarietà e crescita comunitaria.</p>
+            <p>Il nostro obiettivo è portare aiuto concreto e costruire relazioni.</p>
+            <div class="values">
+                <div class="card">❤️ Servizio</div>
+                <div class="card">🤝 Comunità</div>
+                <div class="card">🌍 Missione</div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
         <section id="attivita" class="attivita-section">

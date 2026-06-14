@@ -182,10 +182,65 @@ section {
   justify-content: center;
 }
 
+/* =========================================
+   CAROSELLO CHI SIAMO
+========================================= */
+
+.carousel {
+    position: relative;
+    overflow: hidden; /* Nasconde le immagini fuori dal riquadro */
+    border-radius: 20px; /* Smussa gli angoli dell'immagine, opzionale */
+    width: 100%;
+    /* Se vuoi un'altezza fissa, impostala qui, es: height: 400px; */
+}
+
+.carousel-track {
+    display: flex; /* Mette le immagini una di fianco all'altra */
+    width: 100%;
+    transition: transform 0.5s ease-in-out; /* Animazione fluida dello scorrimento */
+}
+
+.carousel-slide {
+    min-width: 100%; /* Ogni immagine deve occupare il 100% dello spazio visibile */
+    object-fit: cover; /* Taglia l'immagine senza deformarla se le proporzioni non tornano */
+}
+
+/* Stile dei bottoni freccia */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centra perfettamente in verticale */
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%; /* Tasti tondi */
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+
+
 .img-box img {
   width: 1000px;
+  height: 600px;
+  max-height: 600px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.472);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.643);
 }
 
 .text-box h2 {
@@ -427,7 +482,7 @@ section {
 
   .boxes {
     flex-direction: column;
-    height: auto;
+
   }
 
   .box {
