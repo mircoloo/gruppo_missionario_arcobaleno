@@ -1,197 +1,373 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Comfortaa', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", sans-serif;
+}
+
+img {
+  max-width: 100%;
 }
 
 :root {
-    --primary-color: #e67e22; 
-    --text-color: #0d151e;    
-    --bg-color: #ffffff;
+  --primary-color: #e67e22;
+  --text-color: #0d151e;
+  --bg-color: #ffffff;
 }
 
 /* =========================================
    NAVBAR (Desktop)
 ========================================= */
 .navbar {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.397);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(22px);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-    padding: 0.5rem 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.397);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(22px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 0;
 }
 
 .navbar-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Logo */
 .logo {
-    display: flex;
-    align-items: center;
-    height: 88px;
-    width: 88px;
-    background-image: url("./images/logo.png"); /* Assicurati che il percorso sia giusto */
-    background-repeat: no-repeat;
-    background-position: center left;
-    background-size: contain;
-    border-radius: 60px 30px 60px 30px;
+  display: flex;
+  align-items: center;
+  height: 88px;
+  width: 88px;
+  background-image: url("./images/logo.png"); /* Assicurati che il percorso sia giusto */
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: contain;
+  border-radius: 60px 30px 60px 30px;
 }
 
 /* Contenitore links */
 .nav-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 40px;
-    padding: 0.5rem;
-    gap: 0.5rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 40px;
+  padding: 0.5rem;
+  gap: 0.5rem;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 700;
-    padding: 10px 20px;
-    border-radius: 40px;
-    transition: all 0.3s ease;
-    opacity: 0.8;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  opacity: 0.8;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    background-color: rgba(230, 126, 34, 0.3);
-    opacity: 1;
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: rgba(230, 126, 34, 0.3);
+  opacity: 1;
 }
 
 /* Bottone Dona */
 .btn-dona {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    text-decoration: none;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.6rem 1.4rem;
-    border-radius: 30px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn-dona:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
-    color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+  color: white;
+}
+
+/* --------------- SECTION ----------------- */
+section {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
 /* =========================================
    HERO SECTION
 ========================================= */
 .hero-section {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/hero-img.JPG");
-    background-position: center;
-    background-size: cover;
-    padding-top: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./images/hero-img-2.JPG");
+  background-position: center;
+  background-size: cover;
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
 }
 
 .hero-content {
-    position: relative;
-    color: #ffffff;
-    text-align: center;
-    z-index: 2;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  z-index: 2;
 }
 
 .hero-content h1 {
-    font-size: 70px;
-    font-weight: 900;
+  font-size: 70px;
+  font-weight: 900;
 }
 
+.hero-content h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(
+    -50%
+  ); /* Centra perfettamente la linea sotto l'elemento */
+  width: 103%; /* Lunghezza della linea (es. 80% della larghezza del testo) */
+  height: 5px; /* Spessore della linea */
+  border-radius: 5px; /* Angoli arrotondati opzionali */
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+.chi-siamo-section {
+  display: flex;
+  justify-content: center;
+}
+
+/* Chi siamo section */
+.chi-siamo-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-box img {
+  width: 1000px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.472);
+}
+
+.text-box h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.citation {
+  max-width: 1400px;
+  line-height: 1.6;
+  margin: 1rem;
+  color: #ffffff;
+}
+
+.values {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* CHI SIAMO */
+
+.section-title {
+  margin: 30px 0px;
+}
+
+.grid-attivita {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-attivita .card {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 12px;
+  background: #f5f5f5;
+  transition: 0.3s;
+}
+
+.grid-attivita .card:hover {
+  transform: translateY(-5px);
+}
+
+.grid-attivita .card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #f5f5f5;
+  transition: 0.3s;
+}
+
+.grid-attivita .card:hover {
+  transform: translateY(-5px);
+}
 /* =========================================
    SEZIONE PROGETTI (Fisarmonica Desktop)
 ========================================= */
-.projects-section {
-    width: 100%;
+.progetti-container {
+  width: 100%;
 }
 
 .boxes {
-    display: flex;
-    flex-direction: row;
-    height: 70vh;
-    width: 100%;
-    background-color: var(--bg-color);
+  display: flex;
+  flex-direction: row;
+  height: 70vh;
+  width: 100%;
+  background-color: var(--bg-color);
 }
 
 .box {
-    flex: 1;
-    transition: flex 0.6s ease;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    cursor: pointer;
+  flex: 1;
+  transition: flex 0.6s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 /* Sfondi dei box */
-.box1 { background-image: url("./images/img1.jpeg"); background-size: cover; background-position: center; background-color: #ff0000; }
-.box2 { background-image: url("./images/img2.jpeg"); background-size: cover; background-position: center; background-color: #ffa500; }
-.box3 { background-image: url("./images/img3.jpeg"); background-size: cover; background-position: center; background-color: #ffff00; }
-.box4 { background-image: url("./images/img4.jpeg"); background-size: cover; background-position: center; background-color: #008000; }
-.box5 { background-image: url("./images/12122389_917298278349755_6733364548868600455_n.jpg"); background-size: cover; background-position: center; background-color: #0000ff; }
-.box6 { background-color: #4b0082; }
-.box7 { background-color: #ee82ee; }
+.box1 {
+  background-image: url("./images/img1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-color: #ff0000;
+}
+.box2 {
+  background-image: url("./images/img2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-color: #ffa500;
+}
+.box3 {
+  background-image: url("./images/img3.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-color: #ffff00;
+}
+.box4 {
+  background-image: url("./images/img4.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-color: #008000;
+}
+.box5 {
+  background-image: url("./images/12122389_917298278349755_6733364548868600455_n.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #0000ff;
+}
+.box6 {
+  background-image: url("./images/_MG_2130.JPG");
+  background-color: #4b0082;
+  background-size: cover;
+  background-position: center;
+}
+.box7 {
+  background-image: url("./images/IMG_3066.JPG");
+  background-color: #ee82ee;
+  background-size: cover;
+  background-position: center;
+}
 
 /* Oscuratore di base */
 .box-obscuer {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity 0.5s ease;
-    z-index: 1;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s ease;
+  z-index: 1;
 }
 
 /* Stile Testo - Glassmorphism */
 .box h1 {
-    position: relative;
-    z-index: 2;
-    opacity: 0; /* Nascosto su desktop di default */
-    color: white;
-    padding: 1.5rem 2rem;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: opacity 0.5s ease;
-    white-space: nowrap;
+  position: relative;
+  z-index: 2;
+  opacity: 0; /* Nascosto su desktop di default */
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: opacity 0.5s ease;
+  white-space: nowrap;
+}
+
+.box1 h1 {
+  background-color: #ff000085;
+}
+.box2 h1 {
+  background-color: #ffa60085;
+}
+.box3 h1 {
+  background-color: #ffff0085;
+}
+.box4 h1 {
+  background-color: #00800085;
+}
+.box5 h1 {
+  background-color: #0000ff85;
+}
+.box6 h1 {
+  background-color: #4b008285;
+}
+.box7 h1 {
+  background-color: #ee82ee85;
 }
 
 /* Animazioni Hover Fisarmonica */
-.box:hover { flex: 3; }
-.box:hover .box-obscuer { opacity: 0; }
-.box:hover h1 { opacity: 1; }
+.box:hover {
+  flex: 3;
+}
+.box:hover .box-obscuer {
+  opacity: 0;
+}
+.box:hover h1 {
+  opacity: 1;
+}
 
 /* =========================================
    MEDIA QUERIES (Mobile Incolonnato)
@@ -199,70 +375,90 @@
 
 /* A 991px il menu diventa a colonna */
 @media screen and (max-width: 991px) {
-    .navbar-inner {
-        flex-direction: column;
-        padding-top: 1rem;
-        gap: 1rem;
-    }
+  .navbar-inner {
+    flex-direction: column;
+    padding-top: 1rem;
+    gap: 1rem;
+  }
 
-    .nav-content {
-        flex-direction: column;
-        width: 100%;
-        gap: 1rem;
-    }
+  .nav-content {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
 
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-        background: transparent;
-    }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    background: transparent;
+  }
 
-    .nav-links li {
-        width: 100%;
-    }
+  .nav-links li {
+    width: 100%;
+  }
 
-    .nav-links a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-    }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
 
-    .nav-cta, .btn-dona {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 0.5rem;
-    }
+  .nav-cta,
+  .btn-dona {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .text-box {
+    margin: 20px;
+  }
 }
 
 /* A 768px i progetti perdono l'effetto fisarmonica e diventano blocchi fissi */
 @media screen and (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 50px;
-    }
+  .navbar {
+    display: none;
+  }
 
-    .boxes {
-        flex-direction: column;
-        height: auto;
-    }
+  .hero-content h1 {
+    font-size: 50px;
+  }
 
-    .box {
-        height: 180px; 
-        flex: none; /* Rimuove l'elasticità di flexbox */
-    }
+  .boxes {
+    flex-direction: column;
+    height: auto;
+  }
 
-    .box:hover {
-        flex: none; /* Rimuove l'allargamento al tap */
-    }
+  .box {
+    height: 180px;
+    flex: none; /* Rimuove l'elasticità di flexbox */
+  }
 
-    /* Sui telefoni i titoli e l'oscuramento devono essere visibili da subito */
-    .box h1 {
-        opacity: 1;
-        font-size: 1.5rem;
-    }
+  .box:hover {
+    flex: none; /* Rimuove l'allargamento al tap */
+  }
 
-    .box-obscuer {
-        opacity: 1 !important;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
+  /* Sui telefoni i titoli e l'oscuramento devono essere visibili da subito */
+  .box h1 {
+    opacity: 1;
+    font-size: 1.5rem;
+  }
+
+  .box-obscuer {
+    opacity: 1 !important;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .chi-siamo-container {
+    flex-direction: column-reverse;
+  }
+
+  .values {
+    flex-direction: column;
+  }
+
+  .grid-attivita {
+    grid-template-columns: 1fr;
+  }
 }
