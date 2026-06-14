@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,142 +6,106 @@
 }
 
 :root {
-  --primary-color: #e67e22; /* Un arancione terra/caldo per il tasto dona */
-  --text-color: #0d151e;    /* Grigio scuro/antracite per i testi (meno aggressivo del nero) */
-  --bg-color: #ffffff;
+    --primary-color: #e67e22; 
+    --text-color: #0d151e;    
+    --bg-color: #ffffff;
 }
 
-
-/* NAVBAR */
-
-
-.navbar-gma {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0.75rem 0;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); /* Un'ombra leggera e moderna */
-  position: fixed;
-  top: 0;
-  backdrop-filter: blur(22px);
-  z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.85);
+/* =========================================
+   NAVBAR (Desktop)
+========================================= */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.397);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(22px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    padding: 0.5rem 0;
 }
 
-.navbar-gma__inner {
-  align-items: center;
-  gap: 1rem;
-  padding-inline: 5%;
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.navbar-gma__brand {
-  padding: 0;
-  margin-right: 0;
-}
-
-.navbar-gma__collapse {
-  flex-grow: 0;
-}
-
-
-/*.navbar .logo{
-    height: 120px;
-    width: 150px;
-    background: url("https://gruppomissionarioarcobaleno.weebly.com/uploads/4/2/8/1/42814387/1469308157.png");
-    background-size: center;
-    background-size: cover;
-}*/
-
-
-/* Link di Navigazione */
-.nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffffb0;
-  border-radius: 40px;
-  min-height: 70px;
-  gap: 5px;
-}
-
-.nav-links li{
-  margin: 0 10px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 40px;
-}
-
-.nav-links .nav-link {
-  font-family: 'Comfortaa', sans-serif;
-  font-weight: 700;
-  padding: 15px 20px;
-  text-align: center;
-  text-decoration: none;
-  color: var(--text-color);
-  opacity: 0.8;
-  width: fit-content;
-  transition: all 0.3s ease;  
-}
-
-.nav-links li:hover{
-  background-color: rgba(230, 126, 34, 0.3);
-}
-
-.nav-links .nav-link.active {
-  opacity: 1;
-}
-
-/* Stile del Logo */
-
+/* Logo */
 .logo {
-  display: flex;
-  align-items: center;
-  height: 88px;
-  width: 88px; /* imposta larghezza visibile */
-  background-image: url("./images/logo.png");
-  background-repeat: no-repeat;
-  background-position: center left;
-  background-size: contain;
-  gap: 10px;
-  border-radius: 60px 30px 60px 30px;
-  backdrop-filter: blur(10px);    
+    display: flex;
+    align-items: center;
+    height: 88px;
+    width: 88px;
+    background-image: url("./images/logo.png"); /* Assicurati che il percorso sia giusto */
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    border-radius: 60px 30px 60px 30px;
 }
 
+/* Contenitore links */
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 40px;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: rgba(230, 126, 34, 0.3);
+    opacity: 1;
+}
+
+/* Bottone Dona */
 .btn-dona {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  text-decoration: none;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.6rem 1.4rem;
-  border-radius: 30px; /* Bordi completamente arrotondati in linea con il font */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-dona:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+    color: white;
 }
 
-.navbar-gma__toggler {
-  border: 1px solid rgba(13, 21, 30, 0.18);
-}
-
-.navbar-gma__toggler:focus {
-  box-shadow: 0 0 0 0.2rem rgba(230, 126, 34, 0.2);
-}
-
-.navbar-gma .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2813, 21, 30, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-
-/* HERO SECTION*/
-.hero-section{
-    height: 100vh;
+/* =========================================
+   HERO SECTION
+========================================= */
+.hero-section {
+    min-height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/hero-img.JPG");
     background-position: center;
@@ -150,141 +114,155 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-
-  .hero-content {
+.hero-content {
     position: relative;
     color: #ffffff;
     text-align: center;
-    z-index: 2; /* Importante! Deve stare SOPRA l'oscuramento per essere leggibile */
-}
-
-.hero-content h1{
-  font-size: 70px;
-    font-weight: 900;
-}
-
-
-.boxes{
-    margin-top: 120px;
-    display: flex;
-    flex-direction: row;
-    z-index: 0;
-}
-
-.box{
-    height: 100vh;
-    width: calc(100% / 7);
-    transition: .7s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.box1{background-color: #ff0000;
-  background-image: url("./images/img1.jpeg"); 
-  background-position: center;
-  background-size: cover;   
-}
-.box2{background-color: #ffa500;
-background-image: url("./images/img2.jpeg"); 
-  background-position: center;
-  background-size: cover;  }
-.box3{background-color:#ffff00;
-background-image: url("./images/img3.jpeg"); 
-  background-position: center;
-  background-size: cover;  }
-.box4{background-color:#008000;
-background-image: url("./images/img4.jpeg"); 
-  background-position: center;
-  background-size: cover;  }
-.box5{background-color:#0000ff;}
-.box6{background-color:#4b0082;}
-.box7{background-color:#ee82ee;}
-
-.box h1{
-    opacity: 0;
-    color: white;
-    transition:  ease-in .5s;
-    padding: 2rem;
-    border-radius: 20px   ;
-    backdrop-filter: blur(10px);
-}
-
-.box-obscuer{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition:  ease-in .5s;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.box h1{
-    position: relative;
     z-index: 2;
 }
 
-.box:hover{
+.hero-content h1 {
+    font-size: 70px;
+    font-weight: 900;
+}
+
+/* =========================================
+   SEZIONE PROGETTI (Fisarmonica Desktop)
+========================================= */
+.projects-section {
     width: 100%;
 }
 
-.box:hover .box-obscuer{
-  opacity: 0;
-}
-
-.box:hover h1{
-  opacity: 1;
-}
-
-@media screen and (max-width: 420px) {
-  
-  .navbar-gma__inner{
-    padding-inline: 4%;
-  }
-
-  .navbar-gma__collapse{
+.boxes {
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
     width: 100%;
-    margin-top: 0.75rem;
-  }
+    background-color: var(--bg-color);
+}
 
-  .nav-links {
+.box {
+    flex: 1;
+    transition: flex 0.6s ease;
     position: relative;
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-    padding: 0.75rem;
-    background-color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 0.75rem;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
 
+/* Sfondi dei box */
+.box1 { background-image: url("./images/img1.jpeg"); background-size: cover; background-position: center; background-color: #ff0000; }
+.box2 { background-image: url("./images/img2.jpeg"); background-size: cover; background-position: center; background-color: #ffa500; }
+.box3 { background-image: url("./images/img3.jpeg"); background-size: cover; background-position: center; background-color: #ffff00; }
+.box4 { background-image: url("./images/img4.jpeg"); background-size: cover; background-position: center; background-color: #008000; }
+.box5 { background-image: url("./images/12122389_917298278349755_6733364548868600455_n.jpg"); background-size: cover; background-position: center; background-color: #0000ff; }
+.box6 { background-color: #4b0082; }
+.box7 { background-color: #ee82ee; }
 
-  .nav-links li{
-    margin: 0;
-    width: 100%;
-  }
+/* Oscuratore di base */
+.box-obscuer {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
 
-  .nav-links .nav-link{
-    width: 100%;
-  }
+/* Stile Testo - Glassmorphism */
+.box h1 {
+    position: relative;
+    z-index: 2;
+    opacity: 0; /* Nascosto su desktop di default */
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: opacity 0.5s ease;
+    white-space: nowrap;
+}
 
-    .boxes{
+/* Animazioni Hover Fisarmonica */
+.box:hover { flex: 3; }
+.box:hover .box-obscuer { opacity: 0; }
+.box:hover h1 { opacity: 1; }
+
+/* =========================================
+   MEDIA QUERIES (Mobile Incolonnato)
+========================================= */
+
+/* A 991px il menu diventa a colonna */
+@media screen and (max-width: 991px) {
+    .navbar-inner {
         flex-direction: column;
-    }
-    .box{
-        width: 100%;
-        height: calc(100vh / 7);;
+        padding-top: 1rem;
+        gap: 1rem;
     }
 
-    .box:hover{
+    .nav-content {
+        flex-direction: column;
         width: 100%;
-        height: 100%;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        background: transparent;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav-cta, .btn-dona {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* A 768px i progetti perdono l'effetto fisarmonica e diventano blocchi fissi */
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 50px;
+    }
+
+    .boxes {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .box {
+        height: 180px; 
+        flex: none; /* Rimuove l'elasticità di flexbox */
+    }
+
+    .box:hover {
+        flex: none; /* Rimuove l'allargamento al tap */
+    }
+
+    /* Sui telefoni i titoli e l'oscuramento devono essere visibili da subito */
+    .box h1 {
+        opacity: 1;
+        font-size: 1.5rem;
+    }
+
+    .box-obscuer {
+        opacity: 1 !important;
+        background-color: rgba(0, 0, 0, 0.4);
     }
 }
