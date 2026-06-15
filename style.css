@@ -20,7 +20,7 @@ img {
 ========================================= */
 .navbar {
   width: 100%;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -111,7 +111,7 @@ img {
 /* --------------- SECTION ----------------- */
 section {
   width: 100%;
-  max-width: 1500px;
+  max-width: 80%;
   margin: 0 auto;
   min-height: 100vh;
 }
@@ -172,6 +172,10 @@ section {
 .chi-siamo-section {
   display: flex;
   justify-content: center;
+  background-image: url("./images/acquarelli-arcobaleno.png");
+  background-position: bottom;
+  background-size: cover;
+
 }
 
 /* Chi siamo section */
@@ -199,6 +203,7 @@ section {
     display: flex; /* Mette le immagini una di fianco all'altra */
     width: 100%;
     transition: transform 0.5s ease-in-out; /* Animazione fluida dello scorrimento */
+    gap: 1rem;
 }
 
 .carousel-slide {
@@ -238,15 +243,20 @@ section {
 
 .img-box img {
   width: 1000px;
-  
+  gap: 1rem;
   max-height: 600px;
   border-radius: 16px;
-  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.643);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.334);
+}
+
+.text-box{
+  
 }
 
 .text-box h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  
 }
 
 .citation {
@@ -468,7 +478,7 @@ section {
 /* A 768px i progetti perdono l'effetto fisarmonica e diventano blocchi fissi */
 @media screen and (max-width: 768px) {
   .navbar {
-    display: none;
+    position: relative;
   }
 
   .hero-content h1 {

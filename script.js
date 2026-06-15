@@ -1,35 +1,36 @@
 // Selezioniamo gli elementi necessari
-const track = document.getElementById('carouselTrack');
-const slides = document.querySelectorAll('.carousel-slide');
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
+const track = document.querySelector('#carouselTrack');
+let slides = document.querySelectorAll('.carousel-slide');
+const nextBtn = document.querySelector('#nextBtn');
+const prevBtn = document.querySelector('#prevBtn');
 
 // Indice della foto attuale e variabile per il timer
 let currentIndex = 0;
 let autoSlideTimer;
 
-// Funzione che sposta fisicamente il "binario"
-function updateCarousel() {
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+const toAppend = slides[0]
+
 
 // Funzione per andare alla slide successiva
 function moveToNextSlide() {
-    currentIndex++;
-    if (currentIndex >= slides.length) {
-        currentIndex = 0; // Torna alla prima
-    }
-    updateCarousel();
+    const firstSlide = track.firstElementChild;
+
+    track.style.transition = "transform 0.5s ease";
+    track.style.transform = "translateX(calc(-100%))";
+
+    track.addEventListener("transitionend", function handler() {
+        track.style.transition = "none";
+
+        track.append(firstSlide);
+
+        track.style.transform = "translateX(0)";
+
+        track.removeEventListener("transitionend", handler);
+    });
 }
 
 // Funzione per andare alla slide precedente
-function moveToPrevSlide() {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = slides.length - 1; // Vai all'ultima
-    }
-    updateCarousel();
-}
+
 
 // Funzione che fa partire lo scorrimento automatico ogni 3 secondi
 function startAutoPlay() {
